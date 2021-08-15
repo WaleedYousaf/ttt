@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apps.waleed.tictactoe_w.GameModeSelection"
+    android:background="@drawable/plain_bg">
+
+    <TextView
+        android:id="@+id/mainTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="cursive"
+        android:text="Tic Tac Toe"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/singlePlayerBtn"
+        android:layout_width="177dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="playSinglePGame"
+        android:background="@drawable/menu_item"
+        android:fontFamily="cursive"
+        android:text="Single Player"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5327" />
+
+    <Button
+        android:id="@+id/twoPlayerBtn"
+        android:layout_width="177dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="playTwoPGame"
+        android:background="@drawable/menu_item"
+        android:fontFamily="cursive"
+        android:text="Two Players"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singlePlayerBtn" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="64dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/previous_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:orientation="vertical"-->
+<!--android:paddingBottom="16dp"-->
+<!--android:paddingLeft="16dp"-->
+<!--android:paddingRight="16dp"-->
+<!--android:paddingTop="16dp"-->
+<!--android:background="#330000"-->
+<!--&gt;-->
+
+<!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/game_name"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textSize="56sp"-->
+    <!--android:textColor="#ff66ff"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="24dp"-->
+    <!--/>-->
+<!--<Button-->
+    <!--android:id="@+id/twoplayer"-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="Two player"-->
+    <!--android:textSize="40sp"-->
+    <!--android:onClick="playTwoPGame"-->
+    <!--android:background="#66ffff"-->
+    <!--android:textColor="#003300"-->
+    <!--android:padding="10dp"/>-->
+<!--<Button-->
+    <!--android:id="@+id/singleplayer"-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="Single Player"-->
+    <!--android:textSize="40sp"-->
+    <!--android:onClick="playSinglePGame"-->
+    <!--android:background="#66ffff"-->
+    <!--android:textColor="#003300"-->
+    <!--android:padding="10dp"/>-->
+
+<!--</LinearLayout>-->

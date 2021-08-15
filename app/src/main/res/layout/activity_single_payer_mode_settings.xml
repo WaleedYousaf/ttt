@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/plain_bg"
+tools:context="com.apps.waleed.tictactoe_w.SinglePayerModeSettings"
+android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        tools:context="com.example.android.tic_tac_toe.PlayerName">
+
+        <TextView
+            android:id="@+id/mainTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="cursive"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterNameLabelTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/enterNameLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
+            android:gravity="center_vertical"
+            android:text="Enter your name:"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainTV" />
+
+        <EditText
+            android:id="@+id/playerNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#006666"
+            android:textSize="20dp"
+            android:hint="Your name"
+            android:textColor="#fafafa"
+            android:textColorHint="#dadada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterNameLabelTV" />
+
+        <TextView
+            android:id="@+id/noOfGamesLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/ask_numofgames_text"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playerNameET" />
+
+        <EditText
+            android:id="@+id/numberOfGamesET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#006666"
+            android:hint="@string/number_of_games_hint"
+            android:inputType="number"
+            android:textSize="20dp"
+            android:textColor="#fafafa"
+            android:textColorHint="#dadada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noOfGamesLabelTV" />
+
+        <Button
+            android:id="@+id/startGameBtn"
+            android:layout_width="181dp"
+            android:layout_height="62dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/menu_item"
+            android:fontFamily="cursive"
+            android:onClick="submitName"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfGamesET"
+            app:layout_constraintVertical_bias="0.901" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+

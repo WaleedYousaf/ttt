@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/plain_bg"
+    android:fillViewport="true"
+    android:padding="8dp"
+    tools:context="com.apps.waleed.tictactoe_w.VsModeGame">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/redCharIV"
+            android:layout_width="88dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/char_red" />
+
+        <ImageView
+            android:id="@+id/yellowCharIV"
+            android:layout_width="88dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/char_red" />
+
+        <ImageView
+            android:id="@+id/redSwordIV"
+            android:layout_width="63dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="45dp"
+            android:rotationX="45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/red_sword" />
+
+        <ImageView
+            android:id="@+id/yellowSwordIV"
+            android:layout_width="63dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginTop="45dp"
+            android:rotationX="45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/yellow_sword" />
+
+        <TextView
+            android:id="@+id/scoreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="0-0"
+            android:textColor="@android:color/background_light"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="@+id/redSwordIV"
+            app:layout_constraintEnd_toStartOf="@+id/yellowSwordIV"
+            app:layout_constraintStart_toEndOf="@+id/redSwordIV"
+            app:layout_constraintTop_toTopOf="@+id/redSwordIV" />
+
+        <TextView
+            android:id="@+id/pOneNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player One"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/redCharIV"
+            app:layout_constraintEnd_toEndOf="@id/redCharIV"
+            app:layout_constraintTop_toBottomOf="@+id/redCharIV" />
+
+        <TextView
+            android:id="@+id/pTwoNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Two"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/yellowCharIV"
+            app:layout_constraintEnd_toEndOf="@id/yellowCharIV"
+            app:layout_constraintTop_toBottomOf="@+id/redCharIV" />
+
+        <TextView
+            android:id="@+id/player"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:text="@string/default_player_turn_text"
+            android:textColor="#00ff00"
+            android:textSize="22sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pOneNameTV" />
+
+        <Button
+            android:id="@+id/res"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/holo_red_dark"
+            android:onClick="newGame"
+            android:text="@string/restart_game_button_text"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintEnd_toStartOf="@id/restartmatch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grid"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/restartmatch"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/holo_red_dark"
+            android:onClick="newMatch"
+            android:text="@string/restart_match_button_text"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/res"
+            app:layout_constraintTop_toBottomOf="@+id/grid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:layout_weight="3"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:rowCount="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/player"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/a11"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a12"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a13"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a21"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a22"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a23"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a31"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a32"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+            <Button
+                android:id="@+id/a33"
+                android:layout_width="@dimen/round_item_width"
+                android:layout_height="@dimen/round_item_height"
+                android:background="@drawable/round_item"
+                android:fontFamily="@font/allura"
+                android:onClick="playmove"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="70sp" />
+
+        </GridLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
