@@ -17,3 +17,4 @@ An online multiplayer TIC TAC TOE game. Also allow the user to play against AI w
   - <b>Genymotion</b> - Android Emulator
 
 ## In Action:
+![tictactoe_main](https://user-images.githubusercontent.com/44428566/129489551-c5139ae9-f87e-454f-a1b0-e935a97398bf.jpg)
