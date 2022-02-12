@@ -4,6 +4,8 @@
 
 An online multiplayer TIC TAC TOE game. Also allow the user to play against AI with 3 different levels of difficulty. Leverages minimax algorithm for single player vs AI
 
+Developed in 2018.
+
 ## Stack (Tools and Technologies):
 
 - Technologies:
